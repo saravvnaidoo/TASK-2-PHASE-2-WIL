@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1F2A44">
+  <meta name="description" content="Play at Next Level Gaming & Esports Arena. Explore gaming packages and plan your session.">
+  <title>Home | Next Level Gaming & Esports Arena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- The shared header keeps the venue identity visible without adding desktop navigation. -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Next Level Gaming Arena home">
+      <img class="brand-logo" src="assets/nlg-logo.jpg" alt="Next Level Gaming and Esports Arena logo">
+      <span class="brand-fallback" hidden><strong>NEXT LEVEL</strong><small>GAMING &amp; ESPORTS ARENA</small></span>
+    </a>
+    <span class="header-year">EST. 2023</span>
+  </header>
+
+  <main class="page-content home-page">
+    <section class="home-intro" aria-labelledby="welcome-heading">
+      <p class="eyebrow">YOUR NEXT MATCH STARTS HERE</p>
+      <h1 id="welcome-heading">Play beyond<br><span>your setup.</span></h1>
+      <p class="intro-copy">High-spec gaming, ready when you are. Bring your crew, choose your game, and play.</p>
+    </section>
+
+    <!-- The two clear actions sit after the welcome so they are easy to reach while scrolling. -->
+    <section class="home-actions" aria-label="Get started">
+      <a class="button button-primary" href="package.html">View Packages <span aria-hidden="true">&#8594;</span></a>
+      <a class="button button-secondary" href="calculate-fees.html">Calculate Fees <span aria-hidden="true">&#8594;</span></a>
+    </section>
+
+    <section class="quick-highlights" aria-labelledby="highlights-heading">
+      <div class="section-heading-row">
+        <p class="eyebrow">THE ARENA</p>
+        <h2 id="highlights-heading">Choose your lane</h2>
+      </div>
+      <ul class="highlight-list">
+        <li class="highlight-item"><span class="highlight-mark mark-gold" aria-hidden="true">PC</span><div><h3>PC Gaming</h3><p>Competitive rigs, ready to queue.</p></div><a href="package.html" aria-label="Explore PC gaming package">&#8594;</a></li>
+        <li class="highlight-item"><span class="highlight-mark mark-blue" aria-hidden="true">CS</span><div><h3>Console Gaming</h3><p>Current-gen consoles and big screens.</p></div><a href="overview.html" aria-label="See console gaming overview">&#8594;</a></li>
+        <li class="highlight-item"><span class="highlight-mark mark-blue" aria-hidden="true">VIP</span><div><h3>VIP Experience</h3><p>More comfort. More room to play.</p></div><a href="calculate-fees.html" aria-label="Calculate VIP session fees">&#8594;</a></li>
+        <li class="highlight-item highlight-competitive"><span class="highlight-mark mark-red" aria-hidden="true">VS</span><div><h3>Tournaments &amp; events</h3><p>Bring your team and take the stage.</p></div><a href="contact.html" aria-label="Contact us about events">&#8594;</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img class="footer-logo" src="assets/nlg-logo.jpg" alt="Next Level Gaming and Esports Arena logo">
+    <p>Founded by Jason Naidoo in 2023.</p>
+  </footer>
+
+  <!-- Fixed navigation stays within thumb reach; the active link is announced to screen readers. -->
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <a class="nav-item is-active" href="index.html" aria-current="page"><span class="nav-icon" aria-hidden="true">&#8962;</span><span>Home</span></a>
+    <a class="nav-item" href="about.html"><span class="nav-icon" aria-hidden="true">i</span><span>About</span></a>
+    <a class="nav-item" href="overview.html"><span class="nav-icon" aria-hidden="true">&#9638;</span><span>Overview</span></a>
+    <a class="nav-item" href="package.html"><span class="nav-icon" aria-hidden="true">&#9733;</span><span>Package</span></a>
+    <a class="nav-item" href="calculate-fees.html"><span class="nav-icon" aria-hidden="true">R</span><span>Fees</span></a>
+    <a class="nav-item" href="contact.html"><span class="nav-icon" aria-hidden="true">&#9993;</span><span>Contact</span></a>
+  </nav>
+</body>
+</html>

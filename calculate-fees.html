@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1F2A44">
+  <meta name="description" content="Estimate the cost of a gaming session at Next Level Gaming Arena.">
+  <title>Calculate Fees | Next Level Gaming & Esports Arena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Next Level Gaming Arena home">
+      <img class="brand-logo" src="assets/nlg-logo.jpg" alt="Next Level Gaming and Esports Arena logo">
+      <span class="brand-fallback" hidden><strong>NEXT LEVEL</strong><small>GAMING &amp; ESPORTS ARENA</small></span>
+    </a>
+    <span class="header-year">EST. 2023</span>
+  </header>
+
+  <main class="page-content calculator-page">
+    <section class="page-intro" aria-labelledby="page-title">
+      <p class="eyebrow">SESSION PLANNER</p>
+      <h1 id="page-title">Know your<br><span>play total.</span></h1>
+      <p class="intro-copy">Choose a setup and session size. Your estimate updates as you go.</p>
+    </section>
+
+    <!-- A short form and live total make this screen useful without a submit step. -->
+    <form class="calculator-form" id="fee-calculator" novalidate>
+      <div class="field-group">
+        <label for="package-type">Package type</label>
+        <select id="package-type" name="packageType">
+          <option value="pc">PC Gaming - R 45 per hour</option>
+          <option value="console">Console Gaming - R 35 per hour</option>
+          <option value="vip">VIP Experience - R 85 per hour</option>
+        </select>
+      </div>
+      <div class="field-group">
+        <label for="duration">Duration <span class="label-detail">(1-24 hours)</span></label>
+        <div class="input-with-unit"><input id="duration" name="duration" type="number" min="1" max="24" step="1" value="1" inputmode="numeric" required><span>hours</span></div>
+      </div>
+      <div class="field-group">
+        <label for="people">Number of people <span class="label-detail">(1-12)</span></label>
+        <div class="input-with-unit"><input id="people" name="people" type="number" min="1" max="12" step="1" value="1" inputmode="numeric" required><span>people</span></div>
+      </div>
+    </form>
+
+    <section class="total-panel" aria-labelledby="total-heading">
+      <p class="eyebrow" id="total-heading">SESSION ESTIMATE</p>
+      <output class="total-amount" id="fee-total" aria-live="polite" aria-atomic="true">R 45.00</output>
+      <p class="total-message" id="fee-message" role="status">For 1 person, 1 hour.</p>
+      <p class="fee-error" id="fee-error" role="alert" hidden>Please enter a whole number within the range shown.</p>
+    </section>
+    <p class="fine-print">Estimate only. The venue team will confirm your booking and final price.</p>
+  </main>
+
+  <footer class="site-footer">
+    <img class="footer-logo" src="assets/nlg-logo.jpg" alt="Next Level Gaming and Esports Arena logo">
+    <p>Founded by Jason Naidoo in 2023.</p>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <a class="nav-item" href="index.html"><span class="nav-icon" aria-hidden="true">&#8962;</span><span>Home</span></a>
+    <a class="nav-item" href="about.html"><span class="nav-icon" aria-hidden="true">i</span><span>About</span></a>
+    <a class="nav-item" href="overview.html"><span class="nav-icon" aria-hidden="true">&#9638;</span><span>Overview</span></a>
+    <a class="nav-item" href="package.html"><span class="nav-icon" aria-hidden="true">&#9733;</span><span>Package</span></a>
+    <a class="nav-item is-active" href="calculate-fees.html" aria-current="page"><span class="nav-icon" aria-hidden="true">R</span><span>Fees</span></a>
+    <a class="nav-item" href="contact.html"><span class="nav-icon" aria-hidden="true">&#9993;</span><span>Contact</span></a>
+  </nav>
+</body>
+</html>
