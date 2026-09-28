@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation - Next Level Gaming</title>
+    <style>
+        :root { --bg-dark: #1A1D2B; --bg-light: #F8FAFC; --accent-gold: #F0B429; --accent-green: #22C55E; --text-dark: #1E2237; --text-muted: #64748B; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); padding-bottom: 70px; max-width: 480px; margin: 0 auto; text-align: center; }
+        .header { background-color: var(--bg-dark); color: #FFF; padding: 15px; display: flex; align-items: center; gap: 12px; font-weight: bold; text-align: left; }
+        .header-logo { height: 36px; width: auto; max-width: 25vw; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+        .header-title { min-width: 0; overflow-wrap: anywhere; }
+        .container { padding: 30px 20px; }
+        .check-circle { width: 70px; height: 70px; background: var(--accent-green); color: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 20px auto; }
+        .title { font-size: 1.5rem; font-weight: bold; margin-bottom: 10px; }
+        .subtitle { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 25px; }
+        .info-card { background: #FFF; padding: 15px; border-radius: 12px; text-align: left; margin-bottom: 25px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .amount-due { font-size: 1.1rem; font-weight: bold; margin-bottom: 6px; }
+        .note { font-size: 0.78rem; color: var(--text-muted); line-height: 1.3; }
+        .btn-outline { display: block; width: 100%; padding: 12px; border: 1px solid var(--text-dark); background: transparent; color: var(--text-dark); font-weight: bold; border-radius: 8px; text-decoration: none; font-size: 0.9rem; }
+        .footer-banner { width: 100%; height: 100px; object-fit: cover; margin-top: 30px; border-radius: 8px; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; background: #FFF; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #E2E8F0; }
+        .nav-item { text-decoration: none; color: var(--text-muted); font-size: 0.7rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+        .nav-item.active { color: var(--accent-gold); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="assets/logo.jpg" alt="Next Level Gaming and E-Sports Arena" class="header-logo">
+        <span class="header-title"><span style="color: var(--accent-gold);">NEXT LEVEL</span> GAMING</span>
+    </header>
+
+    <div class="container">
+        <div class="check-circle">✓</div>
+        <div class="title">Thank You!</div>
+        <p class="subtitle">Your request has been received. A consultant will contact you shortly.</p>
+
+        <div class="info-card">
+            <div class="amount-due">Amount Due: R2,138.75</div>
+            <div class="note">Incl. 15% VAT. Please be ready to pay this amount when you arrive.</div>
+        </div>
+
+        <a href="index.html" class="btn-outline">Back to Home</a>
+
+        <img class="footer-banner" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Venue Arena">
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><span>🏠</span>Home</a>
+        <a href="about.html" class="nav-item"><span>ℹ️</span>About</a>
+        <a href="packages.html" class="nav-item"><span>🎁</span>Packages</a>
+        <a href="fees.html" class="nav-item active"><span>💳</span>Fees</a>
+        <a href="contact.html" class="nav-item"><span>📞</span>Contact</a>
+    </nav>
+</body>
+</html>

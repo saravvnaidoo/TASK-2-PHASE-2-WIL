@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Experiences - Next Level Gaming</title>
+    <style>
+        :root { --bg-dark: #1A1D2B; --bg-light: #F8FAFC; --accent-gold: #F0B429; --accent-green: #22C55E; --text-dark: #1E2237; --text-muted: #64748B; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); padding-bottom: 70px; max-width: 480px; margin: 0 auto; }
+        .header { background-color: var(--bg-dark); color: #FFF; padding: 15px; display: flex; align-items: center; gap: 12px; font-weight: bold; }
+        .header-logo { height: 36px; width: auto; max-width: 25vw; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+        .header-title { min-width: 0; overflow-wrap: anywhere; }
+        .container { padding: 15px; }
+        .page-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 15px; }
+        .card { background: #FFF; border-radius: 12px; overflow: hidden; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .card-img { width: 100%; height: 130px; object-fit: cover; }
+        .card-body { padding: 12px 15px; }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+        .card-title { font-size: 1rem; font-weight: bold; }
+        .price-tag { background: #DCFCE7; color: #15803D; font-weight: bold; font-size: 0.85rem; padding: 2px 8px; border-radius: 4px; }
+        .card-desc { font-size: 0.80rem; color: var(--text-muted); margin-bottom: 10px; }
+        .features-list { list-style: none; font-size: 0.78rem; color: #475569; margin-bottom: 12px; }
+        .features-list li::before { content: "• "; color: var(--accent-green); font-weight: bold; }
+        .card-actions { display: flex; justify-content: space-between; align-items: center; }
+        .details-link { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; }
+        .book-btn { background: var(--accent-gold); color: #000; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.8rem; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; background: #FFF; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #E2E8F0; }
+        .nav-item { text-decoration: none; color: var(--text-muted); font-size: 0.7rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+        .nav-item.active { color: var(--accent-gold); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="assets/logo.jpg" alt="Next Level Gaming and E-Sports Arena" class="header-logo">
+        <span class="header-title"><span style="color: var(--accent-gold);">NEXT LEVEL</span> GAMING</span>
+    </header>
+
+    <div class="container">
+        <div class="page-title">Individual Experiences</div>
+
+        <!-- Experience 1 -->
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1622979135225-d2ba269bc1bd?auto=format&fit=crop&w=500&q=80" alt="Virtual Reality">
+            <div class="card-body">
+                <div class="card-header">
+                    <div class="card-title">Virtual Reality Experience</div>
+                    <div class="price-tag">R750</div>
+                </div>
+                <div class="card-desc">Explore immersive virtual reality games.</div>
+                <ul class="features-list">
+                    <li>VR headset</li>
+                    <li>Choice of titles</li>
+                    <li>Staff assistance</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="experience-details.html" class="details-link">View details</a>
+                    <a href="fees.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=500&q=80" alt="Racing Simulator">
+            <div class="card-body">
+                <div class="card-header">
+                    <div class="card-title">Racing Simulator Challenge</div>
+                    <div class="price-tag">R750</div>
+                </div>
+                <div class="card-desc">Race on professional driving simulators.</div>
+                <ul class="features-list">
+                    <li>Racing simulator</li>
+                    <li>Choice of tracks</li>
+                    <li>Leaderboard competition</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="experience-details.html" class="details-link">View details</a>
+                    <a href="fees.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=500&q=80" alt="Escape Room">
+            <div class="card-body">
+                <div class="card-header">
+                    <div class="card-title">Escape Room Challenge</div>
+                    <div class="price-tag">R750</div>
+                </div>
+                <div class="card-desc">Solve puzzles and escape before time runs out.</div>
+                <ul class="features-list">
+                    <li>Interactive elements</li>
+                    <li>Themed environments</li>
+                    <li>Team competition</li>
+                </ul>
+                <div class="card-actions">
+                    <a href="experience-details.html" class="details-link">View details</a>
+                    <a href="fees.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><span>🏠</span>Home</a>
+        <a href="about.html" class="nav-item"><span>ℹ️</span>About</a>
+        <a href="packages.html" class="nav-item active"><span>🎁</span>Packages</a>
+        <a href="fees.html" class="nav-item"><span>💳</span>Fees</a>
+        <a href="contact.html" class="nav-item"><span>📞</span>Contact</a>
+    </nav>
+</body>
+</html>

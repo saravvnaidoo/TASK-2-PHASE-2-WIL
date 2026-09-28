@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Fees - Next Level Gaming</title>
+    <style>
+        :root { --bg-dark: #1A1D2B; --bg-light: #F8FAFC; --accent-gold: #F0B429; --accent-green: #22C55E; --text-dark: #1E2237; --text-muted: #64748B; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); padding-bottom: 70px; max-width: 480px; margin: 0 auto; }
+        .header { background-color: var(--bg-dark); color: #FFF; padding: 15px; display: flex; align-items: center; gap: 12px; font-weight: bold; }
+        .header-logo { height: 36px; width: auto; max-width: 25vw; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+        .header-title { min-width: 0; overflow-wrap: anywhere; }
+        .container { padding: 15px; }
+        .page-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 4px; }
+        .page-subtitle { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px; }
+        .item-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #E2E8F0; font-size: 0.85rem; }
+        .item-label { display: flex; align-items: center; gap: 8px; }
+        .price { font-weight: bold; }
+        .btn-calc { display: block; width: 100%; padding: 12px; background: var(--accent-gold); color: #000; font-weight: bold; border-radius: 8px; border: none; margin: 15px 0; cursor: pointer; font-size: 0.9rem; }
+        .results-box { background: #FFF; padding: 15px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .res-line { display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 6px; color: #334155; }
+        .res-line.discount { color: #DC2626; }
+        .res-line.total { border-top: 1px solid #CBD5E1; padding-top: 8px; font-size: 1rem; font-weight: bold; color: #000; }
+        .btn-continue { display: block; width: 100%; padding: 12px; background: var(--accent-green); color: #FFF; text-align: center; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 0.9rem; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; background: #FFF; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #E2E8F0; }
+        .nav-item { text-decoration: none; color: var(--text-muted); font-size: 0.7rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+        .nav-item.active { color: var(--accent-gold); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="assets/logo.jpg" alt="Next Level Gaming and E-Sports Arena" class="header-logo">
+        <span class="header-title"><span style="color: var(--accent-gold);">NEXT LEVEL</span> GAMING</span>
+    </header>
+
+    <div class="container">
+        <div class="page-title">Calculate Total Fees</div>
+        <div class="page-subtitle">Select one or more packages or experiences</div>
+
+        <form id="feeForm">
+            <div class="item-row">
+                <label class="item-label"><input type="checkbox" name="item" value="1500" checked> Ultimate Gamer Pass</label>
+                <span class="price">R1 500</span>
+            </div>
+            <div class="item-row">
+                <label class="item-label"><input type="checkbox" name="item" value="1500"> VIP Gaming Experience</label>
+                <span class="price">R1 500</span>
+            </div>
+            <div class="item-row">
+                <label class="item-label"><input type="checkbox" name="item" value="1500"> Esports Training Package</label>
+                <span class="price">R1 500</span>
+            </div>
+            <div class="item-row">
+                <label class="item-label"><input type="checkbox" name="item" value="1500"> Birthday Party Package</label>
+                <span class="price">R1 500</span>
+            </div>
+            <div class="item-row">
+                <label class="item-label"><input type="checkbox" name="item" value="750" checked> Virtual Reality Experience</label>
+                <span class="price">R750</span>
+            </div>
+            <div class="item-row">
+                <label class="item-label"><input type="checkbox" name="item" value="750"> Racing Simulator Challenge</label>
+                <span class="price">R750</span>
+            </div>
+            <div class="item-row">
+                <label class="item-label"><input type="checkbox" name="item" value="750"> Escape Room Challenge</label>
+                <span class="price">R750</span>
+            </div>
+
+            <button type="submit" class="btn-calc">Calculate Total Fees</button>
+        </form>
+
+        <div class="results-box" id="feeResults" aria-live="polite">
+            <div id="selectedItems"></div>
+            <div class="res-line discount"><span>Discount (5% for 2+ bookings)</span><span id="discountAmount">R 0.00</span></div>
+            <div class="res-line"><span>VAT 15%</span><span id="vatAmount">R 0.00</span></div>
+            <div class="res-line total"><span>Total:</span><span id="totalAmount">R 0.00</span></div>
+        </div>
+
+        <a href="booking.html" class="btn-continue">Continue</a>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><span>🏠</span>Home</a>
+        <a href="about.html" class="nav-item"><span>ℹ️</span>About</a>
+        <a href="packages.html" class="nav-item"><span>🎁</span>Packages</a>
+        <a href="fees.html" class="nav-item active"><span>💳</span>Fees</a>
+        <a href="contact.html" class="nav-item"><span>📞</span>Contact</a>
+    </nav>
+
+    <script>
+        const feeForm = document.getElementById("feeForm");
+        const selectedItemsContainer = document.getElementById("selectedItems");
+        const discountAmount = document.getElementById("discountAmount");
+        const vatAmount = document.getElementById("vatAmount");
+        const totalAmount = document.getElementById("totalAmount");
+        const calculateButton = feeForm.querySelector(".btn-calc");
+
+        function formatCurrency(amount) {
+            return `R ${amount.toFixed(2)}`;
+        }
+
+        function updateTotals(event) {
+            if (event) {
+                event.preventDefault();
+            }
+
+            const selectedItems = Array.from(feeForm.querySelectorAll('input[name="item"]'))
+                .filter((item) => item.checked);
+            const subtotal = selectedItems.reduce((sum, item) => {
+                return sum + (parseFloat(item.value) || 0);
+            }, 0);
+            const discount = selectedItems.length >= 2 ? subtotal * 0.05 : 0;
+            const discountedSubtotal = subtotal - discount;
+            const vat = discountedSubtotal * 0.15;
+            const total = discountedSubtotal + vat;
+
+            selectedItemsContainer.replaceChildren();
+            if (selectedItems.length === 0) {
+                const emptyMessage = document.createElement("div");
+                emptyMessage.className = "res-line";
+                emptyMessage.textContent = "No options selected";
+                selectedItemsContainer.append(emptyMessage);
+            } else {
+                selectedItems.forEach((item) => {
+                    const itemRow = document.createElement("div");
+                    itemRow.className = "res-line";
+
+                    const itemName = document.createElement("span");
+                    itemName.textContent = item.parentElement.textContent.trim();
+
+                    const itemPrice = document.createElement("span");
+                    itemPrice.textContent = formatCurrency(parseFloat(item.value) || 0);
+
+                    itemRow.append(itemName, itemPrice);
+                    selectedItemsContainer.append(itemRow);
+                });
+            }
+
+            discountAmount.textContent = `-${formatCurrency(discount)}`;
+            vatAmount.textContent = formatCurrency(vat);
+            totalAmount.textContent = formatCurrency(total);
+        }
+
+        calculateButton.addEventListener("click", updateTotals);
+        feeForm.addEventListener("submit", updateTotals);
+        feeForm.addEventListener("change", () => updateTotals());
+        updateTotals();
+    </script>
+</body>
+</html>

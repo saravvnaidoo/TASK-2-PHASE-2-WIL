@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Details - Next Level Gaming</title>
+    <style>
+        :root { --bg-dark: #1A1D2B; --bg-light: #F8FAFC; --accent-gold: #F0B429; --accent-green: #22C55E; --text-dark: #1E2237; --text-muted: #64748B; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); padding-bottom: 70px; max-width: 480px; margin: 0 auto; }
+        .header { background-color: var(--bg-dark); color: #FFF; padding: 15px; display: flex; align-items: center; gap: 12px; font-weight: bold; }
+        .header-logo { height: 36px; width: auto; max-width: 25vw; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+        .header-title { min-width: 0; overflow-wrap: anywhere; }
+        .back-btn { color: #FFF; text-decoration: none; font-size: 1.2rem; }
+        .container { padding: 15px; }
+        .summary-card { background: #FFF; padding: 15px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .summary-card h3 { font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; }
+        .sum-line { display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 6px; }
+        .discount-badge { background: #DCFCE7; color: #15803D; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; display: inline-block; margin: 4px 0; }
+        .sum-total { border-top: 1px solid #E2E8F0; padding-top: 8px; font-weight: bold; font-size: 0.9rem; margin-top: 8px; }
+        .form-card { background: #FFF; padding: 15px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .form-card h3 { font-size: 1rem; margin-bottom: 4px; }
+        .form-card p { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 15px; }
+        .form-group { margin-bottom: 12px; }
+        .form-group label { display: block; font-size: 0.8rem; font-weight: bold; margin-bottom: 4px; }
+        .input-box { width: 100%; padding: 10px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 0.85rem; }
+        .input-box.error { border-color: #EF4444; }
+        .error-msg { font-size: 0.72rem; color: #EF4444; margin-top: 4px; }
+        .btn-green { width: 100%; padding: 12px; background: var(--accent-green); color: #FFF; font-weight: bold; border-radius: 8px; border: none; font-size: 0.9rem; margin-top: 10px; cursor: pointer; display: block; text-align: center; text-decoration: none; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; background: #FFF; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #E2E8F0; }
+        .nav-item { text-decoration: none; color: var(--text-muted); font-size: 0.7rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+        .nav-item.active { color: var(--accent-gold); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="fees.html" class="back-btn">←</a>
+        <img src="assets/logo.jpg" alt="Next Level Gaming and E-Sports Arena" class="header-logo">
+        <span class="header-title">NEXT LEVEL GAMING</span>
+    </header>
+
+    <div class="container">
+        <!-- Summary Box -->
+        <div class="summary-card">
+            <h3>BOOKING SUMMARY</h3>
+            <div class="sum-line"><span>Ultimate Gamer Pass</span><span>R1 500</span></div>
+            <div class="sum-line"><span>Virtual Reality Experience</span><span>R750</span></div>
+            <div class="discount-badge">Discount 5% (2 bookings)</div>
+            <div class="sum-total">Total incl. 15% VAT: R2 138.75</div>
+        </div>
+
+        <!-- Details Form -->
+        <div class="form-card">
+            <h3>Your Details</h3>
+            <p>Enter your details to submit your booking request.</p>
+
+            <form action="confirmation.html" method="GET">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="input-box" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Cell Number</label>
+                    <input type="tel" class="input-box" placeholder="Enter your cell number" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" class="input-box error" value="john.doe@email" required>
+                    <div class="error-msg">Please enter a valid email address</div>
+                </div>
+
+                <button type="submit" class="btn-green">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><span>🏠</span>Home</a>
+        <a href="about.html" class="nav-item"><span>ℹ️</span>About</a>
+        <a href="packages.html" class="nav-item"><span>🎁</span>Packages</a>
+        <a href="fees.html" class="nav-item active"><span>💳</span>Fees</a>
+        <a href="contact.html" class="nav-item"><span>📞</span>Contact</a>
+    </nav>
+</body>
+</html>

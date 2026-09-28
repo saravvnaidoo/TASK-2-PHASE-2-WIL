@@ -1,67 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#1F2A44">
-  <meta name="description" content="Play at Next Level Gaming & Esports Arena. Explore gaming packages and plan your session.">
-  <title>Home | Next Level Gaming & Esports Arena</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Level Gaming - Home</title>
+    <style>
+        :root {
+            --bg-dark: #1A1D2B;
+            --bg-card: #24293E;
+            --bg-light: #F4F5F7;
+            --accent-gold: #F0B429;
+            --accent-green: #22C55E;
+            --text-dark: #1E2237;
+            --text-light: #FFFFFF;
+            --text-muted: #8E95A5;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); padding-bottom: 70px; max-width: 480px; margin: 0 auto; }
+        .header { background-color: var(--bg-dark); color: var(--text-light); padding: 15px; display: flex; align-items: center; gap: 12px; font-weight: bold; font-size: 1.1rem; }
+        .header-logo { height: 36px; width: auto; max-width: 25vw; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+        .header-title { min-width: 0; overflow-wrap: anywhere; }
+        .header .logo-text { color: var(--accent-gold); }
+        .container { padding: 15px; }
+        .hero-banner { background-color: var(--bg-dark); color: var(--text-light); padding: 20px; border-radius: 12px; margin-bottom: 15px; }
+        .hero-subtitle { color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .hero-title { font-size: 1.4rem; font-weight: bold; margin-bottom: 10px; }
+        .hero-quote { font-size: 0.85rem; color: #CBD5E1; line-height: 1.4; margin-bottom: 8px; }
+        .hero-author { font-size: 0.8rem; color: var(--accent-gold); font-weight: 600; }
+        .img-card { background-color: #000; border-radius: 12px; overflow: hidden; margin-bottom: 15px; }
+        .img-card img { width: 100%; height: 160px; object-fit: cover; display: block; }
+        .img-card .caption { padding: 12px; font-size: 0.85rem; color: var(--text-dark); line-height: 1.4; background: #FFF; }
+        .quick-nav-card { background: #FFF; padding: 15px; border-radius: 10px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .quick-nav-icon { width: 36px; height: 36px; background: #F1F5F9; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .quick-nav-text h4 { font-size: 0.95rem; font-weight: bold; }
+        .quick-nav-text p { font-size: 0.75rem; color: var(--text-muted); }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; background: #FFF; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #E2E8F0; z-index: 1000; }
+        .nav-item { text-decoration: none; color: var(--text-muted); font-size: 0.7rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+        .nav-item.active { color: var(--accent-gold); font-weight: bold; }
+    </style>
 </head>
 <body>
-  <!-- The shared header keeps the venue identity visible without adding desktop navigation. -->
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Next Level Gaming Arena home">
-      <img class="brand-logo" src="assets/nlg-logo.jpg" alt="Next Level Gaming and Esports Arena logo">
-      <span class="brand-fallback" hidden><strong>NEXT LEVEL</strong><small>GAMING &amp; ESPORTS ARENA</small></span>
-    </a>
-    <span class="header-year">EST. 2023</span>
-  </header>
+    <!-- Top Bar -->
+    <header class="header">
+        <img src="assets/logo.jpg" alt="Next Level Gaming and E-Sports Arena" class="header-logo">
+        <span class="header-title"><span class="logo-text">NEXT LEVEL</span> GAMING</span>
+    </header>
 
-  <main class="page-content home-page">
-    <section class="home-intro" aria-labelledby="welcome-heading">
-      <p class="eyebrow">YOUR NEXT MATCH STARTS HERE</p>
-      <h1 id="welcome-heading">Play beyond<br><span>your setup.</span></h1>
-      <p class="intro-copy">High-spec gaming, ready when you are. Bring your crew, choose your game, and play.</p>
-    </section>
+    <div class="container">
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <div class="hero-subtitle">PLAY WITHOUT LIMITS</div>
+            <div class="hero-title">Welcome to Next Level Gaming!</div>
+            <div class="hero-quote">"Every gamer deserves access to high-end tech, no matter what's in their garage."</div>
+            <div class="hero-author">Jaren Naidoo, Founder</div>
+        </div>
 
-    <!-- The two clear actions sit after the welcome so they are easy to reach while scrolling. -->
-    <section class="home-actions" aria-label="Get started">
-      <a class="button button-primary" href="package.html">View Packages <span aria-hidden="true">&#8594;</span></a>
-      <a class="button button-secondary" href="calculate-fees.html">Calculate Fees <span aria-hidden="true">&#8594;</span></a>
-    </section>
+        <!-- Venue Banner -->
+        <div class="img-card">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Gaming Lounge">
+            <div class="caption">
+                Johannesburg's home for competitive gaming, VR, racing sims and unforgettable events. Walk in, gear up, and play - no ownership required.
+            </div>
+        </div>
 
-    <section class="quick-highlights" aria-labelledby="highlights-heading">
-      <div class="section-heading-row">
-        <p class="eyebrow">THE ARENA</p>
-        <h2 id="highlights-heading">Choose your lane</h2>
-      </div>
-      <ul class="highlight-list">
-        <li class="highlight-item"><span class="highlight-mark mark-gold" aria-hidden="true">PC</span><div><h3>PC Gaming</h3><p>Competitive rigs, ready to queue.</p></div><a href="package.html" aria-label="Explore PC gaming package">&#8594;</a></li>
-        <li class="highlight-item"><span class="highlight-mark mark-blue" aria-hidden="true">CS</span><div><h3>Console Gaming</h3><p>Current-gen consoles and big screens.</p></div><a href="overview.html" aria-label="See console gaming overview">&#8594;</a></li>
-        <li class="highlight-item"><span class="highlight-mark mark-blue" aria-hidden="true">VIP</span><div><h3>VIP Experience</h3><p>More comfort. More room to play.</p></div><a href="calculate-fees.html" aria-label="Calculate VIP session fees">&#8594;</a></li>
-        <li class="highlight-item highlight-competitive"><span class="highlight-mark mark-red" aria-hidden="true">VS</span><div><h3>Tournaments &amp; events</h3><p>Bring your team and take the stage.</p></div><a href="contact.html" aria-label="Contact us about events">&#8594;</a></li>
-      </ul>
-    </section>
-  </main>
+        <!-- Quick Links -->
+        <a href="packages.html" style="text-decoration: none; color: inherit;">
+            <div class="quick-nav-card">
+                <div class="quick-nav-icon">🎮</div>
+                <div class="quick-nav-text">
+                    <h4>Gaming Packages</h4>
+                    <p>Team play / Full day pass / Tournaments</p>
+                </div>
+            </div>
+        </a>
 
-  <footer class="site-footer">
-    <img class="footer-logo" src="assets/nlg-logo.jpg" alt="Next Level Gaming and Esports Arena logo">
-    <p>Founded by Jason Naidoo in 2023.</p>
-  </footer>
+        <a href="experiences.html" style="text-decoration: none; color: inherit;">
+            <div class="quick-nav-card">
+                <div class="quick-nav-icon">🏎️</div>
+                <div class="quick-nav-text">
+                    <h4>Individual Experiences</h4>
+                    <p>VR / Racing / Escape Room Challenges</p>
+                </div>
+            </div>
+        </a>
+    </div>
 
-  <!-- Fixed navigation stays within thumb reach; the active link is announced to screen readers. -->
-  <nav class="bottom-nav" aria-label="Main navigation">
-    <a class="nav-item is-active" href="index.html" aria-current="page"><span class="nav-icon" aria-hidden="true">&#8962;</span><span>Home</span></a>
-    <a class="nav-item" href="about.html"><span class="nav-icon" aria-hidden="true">i</span><span>About</span></a>
-    <a class="nav-item" href="overview.html"><span class="nav-icon" aria-hidden="true">&#9638;</span><span>Overview</span></a>
-    <a class="nav-item" href="package.html"><span class="nav-icon" aria-hidden="true">&#9733;</span><span>Package</span></a>
-    <a class="nav-item" href="calculate-fees.html"><span class="nav-icon" aria-hidden="true">R</span><span>Fees</span></a>
-    <a class="nav-item" href="contact.html"><span class="nav-icon" aria-hidden="true">&#9993;</span><span>Contact</span></a>
-  </nav>
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active"><span>🏠</span>Home</a>
+        <a href="about.html" class="nav-item"><span>ℹ️</span>About</a>
+        <a href="packages.html" class="nav-item"><span>🎁</span>Packages</a>
+        <a href="fees.html" class="nav-item"><span>💳</span>Fees</a>
+        <a href="contact.html" class="nav-item"><span>📞</span>Contact</a>
+    </nav>
 </body>
 </html>

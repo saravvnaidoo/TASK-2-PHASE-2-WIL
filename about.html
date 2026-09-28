@@ -1,68 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#1F2A44">
-  <meta name="description" content="Learn why Jason Naidoo founded Next Level Gaming & Esports Arena in 2023.">
-  <title>About Us | Next Level Gaming & Esports Arena</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Next Level Gaming</title>
+    <style>
+        :root { --bg-dark: #1A1D2B; --bg-light: #F4F5F7; --accent-gold: #F0B429; --text-dark: #1E2237; --text-muted: #64748B; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); padding-bottom: 70px; max-width: 480px; margin: 0 auto; }
+        .header { background-color: var(--bg-dark); color: #FFF; padding: 15px; display: flex; align-items: center; gap: 12px; font-weight: bold; font-size: 1.2rem; }
+        .header-logo { height: 36px; width: auto; max-width: 25vw; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+        .header-title { min-width: 0; overflow-wrap: anywhere; }
+        .container { padding: 15px; }
+        .hero-img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .section-badge { background-color: var(--accent-gold); color: #000; display: inline-block; padding: 4px 10px; border-radius: 4px; font-weight: bold; font-size: 0.8rem; margin-bottom: 10px; }
+        .story-text { font-size: 0.88rem; line-height: 1.5; color: #334155; margin-bottom: 20px; }
+        .info-card { background: #FFF; padding: 15px; border-radius: 10px; margin-bottom: 10px; display: flex; gap: 12px; align-items: flex-start; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .info-icon { font-size: 1.3rem; }
+        .info-content h4 { font-size: 0.95rem; margin-bottom: 4px; }
+        .info-content p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.3; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; background: #FFF; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #E2E8F0; }
+        .nav-item { text-decoration: none; color: var(--text-muted); font-size: 0.7rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+        .nav-item.active { color: var(--accent-gold); font-weight: bold; }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Next Level Gaming Arena home">
-      <img class="brand-logo" src="assets/nlg-logo.jpg" alt="Next Level Gaming and Esports Arena logo">
-      <span class="brand-fallback" hidden><strong>NEXT LEVEL</strong><small>GAMING &amp; ESPORTS ARENA</small></span>
-    </a>
-    <span class="header-year">EST. 2023</span>
-  </header>
+    <header class="header">
+        <img src="assets/logo.jpg" alt="Next Level Gaming and E-Sports Arena" class="header-logo">
+        <span class="header-title">NEXT LEVEL GAMING</span>
+    </header>
 
-  <main class="page-content">
-    <section class="page-intro" aria-labelledby="page-title">
-      <p class="eyebrow">THE STORY SO FAR</p>
-      <h1 id="page-title">Built for<br><span>the players.</span></h1>
-      <p class="intro-copy">Great gaming should be about the match, not the price of the gear.</p>
-    </section>
+    <div class="container">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Esports Arena">
 
-    <section class="story-block" aria-labelledby="story-heading">
-      <p class="story-year" aria-label="Founded in 2023">2023</p>
-      <h2 id="story-heading">A local idea. A bigger arena.</h2>
-      <p>Jason Naidoo started Next Level Gaming &amp; Esports Arena in 2023 to give local players access to high-spec PCs, current-gen consoles and quality peripherals without needing to own any of the hardware themselves.</p>
-      <p>Whether you are practising with a team or meeting friends for a few games, the setup is ready when you arrive.</p>
-    </section>
+        <div class="section-badge">Our Story</div>
+        <p class="story-text">
+            Founded in 2025 in Johannesburg by avid gamer Jaren Naidoo who noticed many gamers lacked access to high-performance equipment and organized competitive events.
+        </p>
 
-    <section class="statement-list" aria-label="Our mission and vision">
-      <article class="statement-item">
-        <span class="statement-label">OUR MISSION</span>
-        <h2>Make better play accessible.</h2>
-        <p>Give every player a welcoming place to play on quality equipment, whatever their home setup looks like.</p>
-      </article>
-      <article class="statement-item statement-vision">
-        <span class="statement-label">OUR VISION</span>
-        <h2>Grow the local game.</h2>
-        <p>Build a connected gaming community where casual players, teams and event organisers can level up together.</p>
-      </article>
-    </section>
+        <div class="info-card">
+            <div class="info-icon">📜</div>
+            <div class="info-content">
+                <h4>History</h4>
+                <p>Started in Johannesburg in 2025 with a passion for competitive gaming.</p>
+            </div>
+        </div>
 
-    <a class="text-link" href="overview.html">See what's available <span aria-hidden="true">&#8594;</span></a>
-  </main>
+        <div class="info-card">
+            <div class="info-icon">👁️</div>
+            <div class="info-content">
+                <h4>Vision</h4>
+                <p>A world where every gamer has access to top-tier tech and facilities.</p>
+            </div>
+        </div>
 
-  <footer class="site-footer">
-    <img class="footer-logo" src="assets/nlg-logo.jpg" alt="Next Level Gaming and Esports Arena logo">
-    <p>Founded by Jason Naidoo in 2023.</p>
-  </footer>
+        <div class="info-card">
+            <div class="info-icon">🎯</div>
+            <div class="info-content">
+                <h4>Mission</h4>
+                <p>Provide high-end PCs, consoles, and simulators without the cost of owning them.</p>
+            </div>
+        </div>
 
-  <nav class="bottom-nav" aria-label="Main navigation">
-    <a class="nav-item" href="index.html"><span class="nav-icon" aria-hidden="true">&#8962;</span><span>Home</span></a>
-    <a class="nav-item is-active" href="about.html" aria-current="page"><span class="nav-icon" aria-hidden="true">i</span><span>About</span></a>
-    <a class="nav-item" href="overview.html"><span class="nav-icon" aria-hidden="true">&#9638;</span><span>Overview</span></a>
-    <a class="nav-item" href="package.html"><span class="nav-icon" aria-hidden="true">&#9733;</span><span>Package</span></a>
-    <a class="nav-item" href="calculate-fees.html"><span class="nav-icon" aria-hidden="true">R</span><span>Fees</span></a>
-    <a class="nav-item" href="contact.html"><span class="nav-icon" aria-hidden="true">&#9993;</span><span>Contact</span></a>
-  </nav>
+        <div class="info-card">
+            <div class="info-icon">🏆</div>
+            <div class="info-content">
+                <h4>Goals</h4>
+                <p>Host local tournaments and build a vibrant gaming community.</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><span>🏠</span>Home</a>
+        <a href="about.html" class="nav-item active"><span>ℹ️</span>About</a>
+        <a href="packages.html" class="nav-item"><span>🎁</span>Packages</a>
+        <a href="fees.html" class="nav-item"><span>💳</span>Fees</a>
+        <a href="contact.html" class="nav-item"><span>📞</span>Contact</a>
+    </nav>
 </body>
 </html>

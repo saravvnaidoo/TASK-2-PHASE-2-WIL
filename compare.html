@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Packages - Next Level Gaming</title>
+    <style>
+        :root { --bg-dark: #1A1D2B; --bg-light: #F8FAFC; --accent-gold: #F0B429; --text-dark: #1E2237; --text-muted: #64748B; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); padding-bottom: 70px; max-width: 480px; margin: 0 auto; }
+        .header { background-color: var(--bg-dark); color: #FFF; padding: 15px; display: flex; align-items: center; gap: 12px; font-weight: bold; }
+        .header-logo { height: 36px; width: auto; max-width: 25vw; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+        .header-title { min-width: 0; overflow-wrap: anywhere; }
+        .hero-title-box { background: var(--bg-dark); color: #FFF; padding: 20px; text-align: center; font-size: 1.4rem; font-weight: bold; letter-spacing: 1px; }
+        .container { padding: 15px; }
+        .compare-table { width: 100%; border-collapse: collapse; background: #FFF; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); font-size: 0.75rem; }
+        .compare-table th { background: var(--bg-dark); color: #FFF; padding: 10px 4px; text-align: center; }
+        .compare-table th:first-child { text-align: left; padding-left: 8px; }
+        .compare-table td { padding: 10px 4px; text-align: center; border-bottom: 1px solid #E2E8F0; }
+        .compare-table td:first-child { font-weight: bold; text-align: left; padding-left: 8px; background: #F8FAFC; }
+        .price-row { color: var(--accent-gold); font-weight: bold; }
+        .btn-gold { display: block; width: 100%; padding: 12px; background: var(--accent-gold); color: #000; font-weight: bold; text-align: center; text-decoration: none; border-radius: 8px; margin-top: 20px; font-size: 0.9rem; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; background: #FFF; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #E2E8F0; }
+        .nav-item { text-decoration: none; color: var(--text-muted); font-size: 0.7rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+        .nav-item.active { color: var(--accent-gold); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="assets/logo.jpg" alt="Next Level Gaming and E-Sports Arena" class="header-logo">
+        <span class="header-title"><span style="color: var(--accent-gold);">NEXT LEVEL</span> GAMING</span>
+    </header>
+
+    <div class="hero-title-box">COMPARE PACKAGES</div>
+
+    <div class="container">
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th style="color: var(--accent-gold);">Ultimate</th>
+                    <th>VIP</th>
+                    <th>Esports</th>
+                    <th>Birthday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="price-row">
+                    <td>Price</td>
+                    <td>R1500</td>
+                    <td>R1500</td>
+                    <td>R1500</td>
+                    <td>R1500</td>
+                </tr>
+                <tr>
+                    <td>Format</td>
+                    <td>Full day</td>
+                    <td>Private booth</td>
+                    <td>Coaching</td>
+                    <td>Party event</td>
+                </tr>
+                <tr>
+                    <td>Best for</td>
+                    <td>Solo gamer</td>
+                    <td>VIP guest</td>
+                    <td>Competitive</td>
+                    <td>Groups/kids</td>
+                </tr>
+                <tr>
+                    <td>Key perk</td>
+                    <td>Tournament</td>
+                    <td>Assistant</td>
+                    <td>Feedback</td>
+                    <td>Catering</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="fees.html" class="btn-gold">ADD TO QUOTE</a>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><span>🏠</span>Home</a>
+        <a href="about.html" class="nav-item"><span>ℹ️</span>About</a>
+        <a href="packages.html" class="nav-item active"><span>🎁</span>Packages</a>
+        <a href="fees.html" class="nav-item"><span>💳</span>Fees</a>
+        <a href="contact.html" class="nav-item"><span>📞</span>Contact</a>
+    </nav>
+</body>
+</html>

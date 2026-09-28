@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Packages - Next Level Gaming</title>
+    <style>
+        :root { --bg-dark: #1A1D2B; --bg-light: #F8FAFC; --accent-gold: #F0B429; --text-dark: #1E2237; --text-muted: #64748B; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); padding-bottom: 70px; max-width: 480px; margin: 0 auto; }
+        .header { background-color: var(--bg-dark); color: #FFF; padding: 15px; display: flex; align-items: center; gap: 12px; font-weight: bold; }
+        .header-logo { height: 36px; width: auto; max-width: 25vw; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+        .header-title { min-width: 0; overflow-wrap: anywhere; }
+        .container { padding: 15px; }
+        .page-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 10px; }
+        .filter-select { width: 100%; padding: 8px 12px; border: 1px solid #CBD5E1; border-radius: 6px; margin-bottom: 15px; background: #FFF; font-size: 0.85rem; color: var(--text-muted); }
+        .card { background: #FFF; border-radius: 12px; overflow: hidden; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .card-img { width: 100%; height: 130px; object-fit: cover; }
+        .card-body { padding: 12px 15px; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+        .card-title { font-size: 1rem; font-weight: bold; }
+        .card-price { background: #FEF3C7; color: #D97706; font-weight: bold; font-size: 0.85rem; padding: 2px 8px; border-radius: 4px; }
+        .card-desc { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px; }
+        .includes-title { font-size: 0.7rem; font-weight: bold; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
+        .includes-list { list-style: none; font-size: 0.78rem; color: #475569; margin-bottom: 10px; }
+        .includes-list li::before { content: "• "; color: var(--accent-gold); font-weight: bold; }
+        .details-btn { font-size: 0.8rem; color: #2563EB; font-weight: bold; text-decoration: none; display: inline-block; }
+        .table-section { background: #FFF; padding: 12px; border-radius: 10px; margin-top: 25px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .table-section h3 { font-size: 1rem; margin-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+        th, td { text-align: left; padding: 8px 4px; border-bottom: 1px solid #E2E8F0; }
+        th { background: var(--bg-dark); color: #FFF; }
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; max-width: 480px; margin: 0 auto; background: #FFF; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #E2E8F0; }
+        .nav-item { text-decoration: none; color: var(--text-muted); font-size: 0.7rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+        .nav-item.active { color: var(--accent-gold); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="assets/logo.jpg" alt="Next Level Gaming and E-Sports Arena" class="header-logo">
+        <span class="header-title"><span style="color: var(--accent-gold);">NEXT LEVEL</span> GAMING</span>
+    </header>
+
+    <div class="container">
+        <div class="page-title">Gaming Packages</div>
+        <select class="filter-select" id="packageSort" aria-label="Sort packages">
+            <option value="" selected>Sort packages by...</option>
+            <option value="price">Sort by Price (Low to High)</option>
+            <option value="name">Sort by Name (A to Z)</option>
+        </select>
+
+        <div id="packageCards">
+        <!-- Package 1 -->
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=500&q=80" alt="Ultimate Gamer Pass">
+            <div class="card-body">
+                <div class="card-header">
+                    <div class="card-title">Ultimate Gamer Pass</div>
+                    <div class="card-price">R1500</div>
+                </div>
+                <div class="card-desc">Unlimited gaming access for a full day.</div>
+                <div class="includes-title">INCLUDES</div>
+                <ul class="includes-list">
+                    <li>PC gaming</li>
+                    <li>Console gaming</li>
+                    <li>High-speed internet</li>
+                    <li>Snack voucher</li>
+                    <li>Tournament entry</li>
+                </ul>
+                <a href="package-details.html" class="details-btn">View details</a>
+            </div>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=500&q=80" alt="VIP Gaming Experience">
+            <div class="card-body">
+                <div class="card-header">
+                    <div class="card-title">VIP Gaming Experience</div>
+                    <div class="card-price">R1500</div>
+                </div>
+                <div class="card-desc">Premium gaming experience with exclusive facilities.</div>
+                <div class="includes-title">INCLUDES</div>
+                <ul class="includes-list">
+                    <li>Private gaming booth</li>
+                    <li>Premium gaming equipment</li>
+                    <li>Food and drinks</li>
+                    <li>Priority booking</li>
+                    <li>Personal gaming assistant</li>
+                </ul>
+                <a href="package-details.html" class="details-btn">View details</a>
+            </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=500&q=80" alt="Esports Training Package">
+            <div class="card-body">
+                <div class="card-header">
+                    <div class="card-title">Esports Training Package</div>
+                    <div class="card-price">R1500</div>
+                </div>
+                <div class="card-desc">Improve competitive gaming skills with professional coaching.</div>
+                <div class="includes-title">INCLUDES</div>
+                <ul class="includes-list">
+                    <li>Strategy coaching</li>
+                    <li>Team communication</li>
+                    <li>Match analysis</li>
+                    <li>Practice sessions</li>
+                    <li>Performance feedback</li>
+                </ul>
+                <a href="package-details.html" class="details-btn">View details</a>
+            </div>
+        </div>
+
+        <!-- Package 4 -->
+        <div class="card">
+            <img class="card-img" src="https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=500&q=80" alt="Birthday Party Package">
+            <div class="card-body">
+                <div class="card-header">
+                    <div class="card-title">Birthday Party Package</div>
+                    <div class="card-price">R1500</div>
+                </div>
+                <div class="card-desc">Host a gaming-themed birthday celebration.</div>
+                <div class="includes-title">INCLUDES</div>
+                <ul class="includes-list">
+                    <li>Reserved gaming area</li>
+                    <li>Multiplayer competitions</li>
+                    <li>Party decorations</li>
+                    <li>Catering</li>
+                    <li>Tournament prizes</li>
+                </ul>
+                <a href="package-details.html" class="details-btn">View details</a>
+            </div>
+        </div>
+        </div>
+
+        <!-- Screen 12: All Packages Table -->
+        <div class="table-section">
+            <h3>All Packages and Experiences</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Package</th>
+                        <th>Fee</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="packageTableBody">
+                    <tr><td>Ultimate Gamer Pass</td><td>R1 500</td><td>Package</td></tr>
+                    <tr><td>VIP Gaming Experience</td><td>R1 500</td><td>Package</td></tr>
+                    <tr><td>Esports Training Package</td><td>R1 500</td><td>Package</td></tr>
+                    <tr><td>Birthday Party Package</td><td>R1 500</td><td>Package</td></tr>
+                    <tr><td>Virtual Reality Experience</td><td>R750</td><td>Experience</td></tr>
+                    <tr><td>Racing Simulator Challenge</td><td>R750</td><td>Experience</td></tr>
+                    <tr><td>Escape Room Challenge</td><td>R750</td><td>Experience</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 8px;">* Discount 5% applies for 2 or more bookings.</p>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><span>🏠</span>Home</a>
+        <a href="about.html" class="nav-item"><span>ℹ️</span>About</a>
+        <a href="packages.html" class="nav-item active"><span>🎁</span>Packages</a>
+        <a href="fees.html" class="nav-item"><span>💳</span>Fees</a>
+        <a href="contact.html" class="nav-item"><span>📞</span>Contact</a>
+    </nav>
+
+    <script>
+        const packageSort = document.getElementById("packageSort");
+        const packageCards = document.getElementById("packageCards");
+        const packageTableBody = document.getElementById("packageTableBody");
+        const originalCards = Array.from(packageCards.querySelectorAll(".card"));
+        const originalRows = Array.from(packageTableBody.querySelectorAll("tr"));
+
+        function getPrice(text) {
+            return parseFloat(text.replace(/[^0-9.]/g, "")) || 0;
+        }
+
+        function sortElements(elements, sortBy, getName, getPriceText) {
+            return elements.slice().sort((a, b) => {
+                if (sortBy === "price") {
+                    const priceDifference = getPrice(getPriceText(a)) - getPrice(getPriceText(b));
+                    if (priceDifference !== 0) {
+                        return priceDifference;
+                    }
+                }
+
+                return getName(a).localeCompare(getName(b));
+            });
+        }
+
+        packageSort.addEventListener("change", (event) => {
+            if (event.currentTarget.form) {
+                event.preventDefault();
+            }
+
+            const sortedCards = packageSort.value
+                ? sortElements(
+                    originalCards,
+                    packageSort.value,
+                    (card) => card.querySelector(".card-title").textContent.trim(),
+                    (card) => card.querySelector(".card-price").textContent
+                )
+                : originalCards.slice();
+            const sortedRows = packageSort.value
+                ? sortElements(
+                    originalRows,
+                    packageSort.value,
+                    (row) => row.cells[0].textContent.trim(),
+                    (row) => row.cells[1].textContent
+                )
+                : originalRows.slice();
+
+            packageCards.innerHTML = "";
+            packageCards.append(...sortedCards);
+            packageTableBody.innerHTML = "";
+            packageTableBody.append(...sortedRows);
+        });
+    </script>
+</body>
+</html>
